@@ -8,6 +8,7 @@ public class Account {
     public void setName(String name) {
         this.name = name; // store the name
     }
+
         public String getName() {
             return name;
         }
