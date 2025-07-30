@@ -5,7 +5,6 @@ public class Account {
 
     // method to set the name in the object
 
-
     public void setName(String name) {
         this.name = name; // store the name
     }
