@@ -10,9 +10,12 @@ public class PetrolPurchase {
     public PetrolPurchase(String location, String petrolType, int quantity, double price, double discount) {
         this.location = location;
         this.petrolType = petrolType;
-        this.quantity = quantity;
-        this.price = price;
-        this.discount = discount;
+        if (quantity > 0) {
+            this.quantity = quantity;}
+        if (price > 0.0) {
+            this.price = price;}
+        if (discount > 0.0) {
+            this.discount = discount;}
     }
 
     public void setLocation(String location) {
