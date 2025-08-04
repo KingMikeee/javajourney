@@ -31,8 +31,8 @@ public class HeartRateApp {
         System.out.printf("Hello %s %s.%n", patient.getFirstname(), patient.getLastname());
         System.out.printf("Your date of birth is %d %s %d, therefore you are %d years old.%n", patient.getDayOfBirth(), patient.getMonthOfBirth(), patient.getYearOfBirth(), patient.getAge());
         System.out.println(" ");
-        System.out.printf("Your maximum heart rate in beats per minute is %d%n", patient.getRate());
-        System.out.printf("Your target heart rate range is between %.2f - %.2f beats per minute", patient.getTargetRate(), patient.getTargetRate1());
+        System.out.printf("Your maximum heart rate in beats per minute is %d.%n", patient.getRate());
+        System.out.printf("Your target heart rate range is between %.2f - %.2f beats per minute.", patient.getTargetRate(), patient.getTargetRate1());
 
 
 
