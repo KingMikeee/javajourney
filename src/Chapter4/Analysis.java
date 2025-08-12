@@ -13,12 +13,12 @@ public class Analysis {
             int result = input.nextInt();
 
             if (result == 1){
-                passes = passes + 1;
+                passes += 1;
             }
             else {
-                failures = failures + 1;
+                failures += 1;
             }
-            studentCounter = studentCounter + 1;
+            studentCounter += 1;
         }
 
         System.out.printf("Passed: %d%nFailed: %d%n",passes, failures);
