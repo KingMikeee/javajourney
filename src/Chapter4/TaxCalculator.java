@@ -9,11 +9,12 @@ public class TaxCalculator {
         double tax = 0.00;
         int counter = 1;
 
-        System.out.println("Enter Citizen name: ");
-        String name = input.nextLine();
+
 
         while (counter <= 3){
-            counter += 1;
+            System.out.println("Enter Citizen name: ");
+            String name = input.next();
+
             System.out.println("Enter amount earned in the year: ");
             earnings = input.nextDouble();
             if (earnings <= 30000.00){
@@ -22,9 +23,9 @@ public class TaxCalculator {
                 tax = earnings * rate2;
             }
             System.out.printf("The tax paid by %s at the end of the year is $%.2f%n", name, tax);
+            counter += 1;
 
-            System.out.println("Enter Citizen name: ");
-            name = input.next();
+
 
 
         }
