@@ -15,7 +15,6 @@ public class ReadingNumbers {
                 System.out.println("Enter integers to add up");
                 int integer = input.nextInt();
                 integerSum += integer;
-
             }
             System.out.printf("The sum of the integers %d is is now greater than or equal to %d", integerSum, number);
         }
