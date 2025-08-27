@@ -8,7 +8,7 @@ public class DecyrptionOfCryptography {
         System.out.println("Enter 4 digit number to decrypt: ");
         int num = input.nextInt();
         while (num < 1000 || num > 9999){
-            System.out.println("Error!! Enter 4 digit number: ");
+            System.out.println("Error!! Enter Encrypted 4 digit number: ");
             num = input.nextInt();
         }
 
