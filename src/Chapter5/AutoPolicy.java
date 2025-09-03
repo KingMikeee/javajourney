@@ -44,6 +44,7 @@ public class AutoPolicy {
                 noFaultState = false;
                 break;
         }
+
         return noFaultState;
     }
 }
