@@ -2,18 +2,24 @@ package Chapter5;
 
 public class Interest {
     public static void main(String[] args) {
-        double principal = 1000.00;
+        int principalPennies = 100000;
 
-        for (double rate = 0.05; rate <= 0.10; rate += 0.01) {
-            System.out.printf("%nThe interest rate is: %.0f%n", rate * 100.);
+        for (int rate = 5; rate <= 10; rate += 1) {
+            System.out.printf("%nThe interest rate is: %d%n", rate);
             System.out.printf("%s%20s%n", "Year", "Amount of deposit");
 
             for (int year = 1; year <= 10; year++) {
-                double amount = principal * Math.pow(1.0 + rate, year);
+                int amountPennies = principalPennies;
 
-                System.out.printf("%4d%,20.2f%n", year, amount);
+                for (int i =0; i < year; i++){
+                    amountPennies = amountPennies *(100 + rate) / 100;
+                }
+                int dollars = amountPennies / 100;
+                int cents = amountPennies % 100;
 
-            }
+                System.out.printf("%4d%,20d.%02d%n", year, dollars, cents);
+
+            } 
         }
     }
 }
