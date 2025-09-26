@@ -5,10 +5,10 @@ public class AutoPolicy {
     private String makeAndModel;
     private String state;
 
-    public AutoPolicy(int accountNumber, String makeAndModel, String state) {
+    public AutoPolicy(int accountNumber, String makeAndModel, String stateCode) {
         this.accountNumber = accountNumber;
         this.makeAndModel = makeAndModel;
-        this.state = state;
+        setState(stateCode);
     }
 
     public void setAccountNumber(int accountNumber) {
@@ -27,12 +27,24 @@ public class AutoPolicy {
         return makeAndModel;
     }
 
-    public void setState(String state){
+    public void setState(String stateCode){
+        if (isValidNortheastState(stateCode)) {
+            this.state = stateCode;
+        } else {
+            System.out.printf("Error: '%s' is not a valid northeast state code.%n", stateCode);
+            this.state = "Invalid";
+        }
+
         this.state = state;
     }
     public String getState() {
         return state;
     }
+private boolean isValidNortheastState(String code) {
+    return code.equals("CT") || code.equals("MA") || code.equals("ME") ||
+            code.equals("NH") || code.equals("NJ") || code.equals("NY") ||
+            code.equals("PA") || code.equals("VT");
+}
     public boolean isNoFaultState() {
         boolean noFaultState;
 
