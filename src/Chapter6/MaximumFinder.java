@@ -23,6 +23,7 @@ public class MaximumFinder {
             maximumValue = y;
         }
 
+
         if (z > maximumValue) {
             maximumValue = z;
         }
