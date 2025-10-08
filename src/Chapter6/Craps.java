@@ -12,6 +12,7 @@ public class Craps {
     private static final int YO_LEVEN = 11;
     private static final int BOX_CARS = 12;
 
+
     public static void main(String[] args) {
         int myPoint = 0;
         Status gameStatus;
